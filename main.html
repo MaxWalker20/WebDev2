@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <div id="helloworld"  style="width: 100%; height: 100%;"></div>
+    <script src="openseadragon/openseadragon.min.js"></script>
+    <script type="text/javascript">
+      var viewer = OpenSeadragon({
+        id:            'helloworld',
+        prefixUrl:     'openseadragon/images/',
+        tileSources: {
+          type: 'image',
+          url:  'images/almeria_oli2_2022144_lrg.jpg'
+        }
+      });
+    </script>
+  </body>
+</html>
