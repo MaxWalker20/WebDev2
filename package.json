@@ -1,8 +1,8 @@
 {
   "name": "webdev2",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000W\u0000e\u0000b\u0000D\u0000e\u0000v\u00002\u0000\r\u0000 \u0000\"# WebDev2\"\r  \"Oooo baby if you can read this somethin's happnin'  >W<\"",
-  "main": "index.js",
+  "description": "��#\u0000 \u0000W\u0000e\u0000b\u0000D\u0000e\u0000v\u00002\u0000\r\u0000 \u0000\"# WebDev2\"\r  \"Max Walker's Web Dev Project for uni\"",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
