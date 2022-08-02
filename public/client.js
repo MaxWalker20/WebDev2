@@ -20,6 +20,19 @@ function loadImage(imagePath) {
 }
 
 function buildDropDown() {
+  fetch('/imageOptions', {method: 'GET'})
+    .then(function(response) {
+      const body = response.json();
+      console.log(body);
+      if(response.ok) {
+        return;
+      }
+      throw new Error('Request sent.');
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+
   var myParent = document.getElementById('controls');
 
   //Create array of options to be added
@@ -53,17 +66,7 @@ button.addEventListener('click', function(e) {
   }
   loadImage(imagePath);
 
-  fetch('/clicked', {method: 'POST'})
-    .then(function(response) {
-      if(response.ok) {
-        console.log('Click was recorded');
-        return;
-      }
-      throw new Error('Request sent.');
-    })
-    .catch(function(error) {
-      console.log(error);
-    });
+
 });
 
 window.onload = (event) => {
