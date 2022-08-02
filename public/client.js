@@ -21,15 +21,21 @@ function loadImage(imagePath) {
 
 function buildDropDown() {
   fetch('/imageOptions', {method: 'GET'})
-    .then(function(response) {
-      const body = response.json();
-      console.log(body);
-      if(response.ok) {
-        return;
-      }
-      throw new Error('Request sent.');
-    })
-    .catch(function(error) {
+      .then(response => response.json())
+        .then(data => {
+          console.log(data);
+        })
+
+
+    // .then(function(response) {
+    //   const body = response.result[];
+    //   console.log(body);
+    //   if(response.ok) {
+    //     return;
+    //   }
+    //   throw new Error('Request sent.');
+    // })
+    .catch(error => {
       console.log(error);
     });
 
