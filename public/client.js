@@ -1,24 +1,35 @@
 const button = document.getElementById('loadButton');
-var viewer;
+const viewerId = 'viewer';
+
+
+function loadImage(imagePath) {
+  const viewer = document.createElement('div');
+  viewer.id = viewerId;
+
+  viewerContainer.appendChild(viewer);
+
+  var openSeaDragon = OpenSeadragon({
+    id:            viewerId,
+    prefixUrl:     'openseadragon/images/',
+    tileSources: {
+      type: 'image',
+      url:  imagePath
+    }
+  });
+}
+
 button.addEventListener('click', function(e) {
   console.log('button was clicked');
   var e = document.getElementById("imageChoice");
-  var value = e.value;
+  var imagePath = e.value;
   var viewerContainer = document.getElementById("viewerContainer");
-  console.log(value);
+  var viewer = document.getElementById(viewerId);
+  console.log(imagePath);
   if (viewer != null){
-    viewer.replaceChild(value, url);
-  } else {
-    viewerContainer.appendChild(viewer);
-    viewer = OpenSeadragon({
-      id:            'viewer',
-      prefixUrl:     'openseadragon/images/',
-      tileSources: {
-        type: 'image',
-        url:  value
-      }
-    });
+    viewer.remove();
   }
+  loadImage(imagePath);
+
   fetch('/clicked', {method: 'POST'})
     .then(function(response) {
       if(response.ok) {
