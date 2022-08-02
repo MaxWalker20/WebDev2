@@ -24,38 +24,26 @@ function buildDropDown() {
       .then(response => response.json())
         .then(data => {
           console.log(data);
+          var myParent = document.getElementById('controls');
+
+          //Create and append select list
+          var selectList = document.createElement("select");
+          selectList.id = "imageChoice";
+          myParent.appendChild(selectList);
+
+          //Create and append the options
+          for (var i = 0; i < data.length; i++) {
+              var option = document.createElement("option");
+              option.value = ('images/' + data[i]);
+              option.text = data[i];
+              selectList.appendChild(option);
+          }
         })
-
-
-    // .then(function(response) {
-    //   const body = response.result[];
-    //   console.log(body);
-    //   if(response.ok) {
-    //     return;
-    //   }
-    //   throw new Error('Request sent.');
-    // })
     .catch(error => {
       console.log(error);
     });
 
-  var myParent = document.getElementById('controls');
 
-  //Create array of options to be added
-  var array = ["Volvo","Saab","Mercades","Audi"];
-
-  //Create and append select list
-  var selectList = document.createElement("select");
-  selectList.id = "mySelect";
-  myParent.appendChild(selectList);
-
-  //Create and append the options
-  for (var i = 0; i < array.length; i++) {
-      var option = document.createElement("option");
-      option.value = array[i];
-      option.text = array[i];
-      selectList.appendChild(option);
-  }
 
 
 }
