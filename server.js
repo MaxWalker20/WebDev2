@@ -21,7 +21,6 @@ app.get('/imageOptions', function(req, res){
 
   fs.readdirSync(testFolder).forEach(file => {
     fileNames.push(file);
-    console.log(file);
   });
   res.send(fileNames);
 });
