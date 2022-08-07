@@ -35,7 +35,17 @@ button.addEventListener('click', function(e) {
   loadImage(imagePath);
 });
 
+document.getElementById("controls").onload = function() {defaultImage()};
+
+function defaultImage(){
+  console.log("controls loaded pls");
+  defaultImageUrl = 'images/almeria_oli2_2022144_lrg.jpg';
+  loadImage(defaultImageUrl);
+}
+
 function loadImage(imagePath) {   //Load this fresh with every image
+  console.log("debugmode commence");
+  console.log(imagePath);
   const viewer = document.createElement('div');
   viewer.id = viewerId;
   viewerContainer.appendChild(viewer);
