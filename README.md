@@ -13,13 +13,25 @@ This code requires an active server to connect to. To start the server, navigate
 
 Now connect to http://localhost:3000/ in your web browser of choice. 
 
-![Alt text](./readmescreenshots/000default.png "The landing page")
+![Alt text](./readmescreenshots/001almeria.png "The landing page")
 
-You will need to press To add your own images, put them in WebDev2/images before starting the server. To apply changes, restart the server and the web page.
+The default image is a satellite photocollage of Almeria, Spain. 
 
-The viewer also works on the following filetypes: 
- - .DZI
- - .IIF
- - .OSM
- - .TMS
- - 
+To change the image you'd like to zoom into, select one from the dropdown text box.
+
+
+![Alt text](./readmescreenshots/002dropdown.png "The selection of images")
+![Alt text](./readmescreenshots/004changedFile.png "A different file")
+
+To add your own images, you will need to put them in `./WebDev2/images` before starting the server. To apply changes, restart the server and the web page. You can also set the default image by changing the relevant URL variable in the `defaultImage()` function inside `client.js`.
+
+The viewer works on the following filetypes: 
+ - `.DZI`
+ - `.IIIF`
+ - `.OSM`
+ - `.TMS`
+ - All 'simple' image types, eg. `.png`, `.jpg`, `.gif`, etc.
+
+### Future features
+ - The images could be uploaded directly to the `/images` folder, saving the user having to open the viewer separately.
+ - There is built in functionality for conversion to and from the native `.dzi` filetype for all the previously mentioned filetypes, this is in progress inside the folder `/dziConstruction`.
