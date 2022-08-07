@@ -23,7 +23,11 @@ To change the image you'd like to zoom into, select one from the dropdown text b
 ![Alt text](./readmescreenshots/002dropdown.png "The selection of images")
 ![Alt text](./readmescreenshots/004changedFile.png "A different file")
 
-To add your own images, you will need to put them in `./WebDev2/images` before starting the server. To apply changes, restart the server and the web page. You can also set the default image by changing the relevant URL variable in the `defaultImage()` function inside `client.js`.
+To add your own images, you will need to put them in `./WebDev2/images` before starting the server. 
+
+![Alt text](./readmescreenshots/003files.png "These are the files represented inside the select element")
+
+To apply changes, restart the server and the web page. You can also set the default image by changing the relevant URL variable in the `defaultImage()` function inside `client.js`.
 
 The viewer works on the following filetypes: 
  - `.DZI`
