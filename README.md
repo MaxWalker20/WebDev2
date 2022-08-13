@@ -39,3 +39,6 @@ The viewer works on the following filetypes:
 ### Future features
  - The images could be uploaded directly to the `/images` folder, saving the user having to open the viewer separately.
  - There is built in functionality for conversion to and from the native `.dzi` filetype for all the previously mentioned filetypes, this is in progress inside the folder `/dziConstruction`.
+
+### Github Page
+The development history for this product can be found at https://github.com/MaxWalker20/WebDev2
